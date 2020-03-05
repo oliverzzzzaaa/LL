@@ -410,10 +410,10 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         value: "Log In"
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "splash_pic1",
-        src: "assets/splash_pic1"
+        src: window.splash_pic1
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "splash_pic2",
-        src: "assets/splash_pic2"
+        src: window.splash_pic2
       }));
     }
   }]);

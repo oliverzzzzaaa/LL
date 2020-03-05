@@ -74,8 +74,8 @@ class LoginForm extends React.Component {
                     </form>
                 </div>
                 {/* <img className="splash_pic2" src=“assets/splash_pic2” /> */}
-                <img className="splash_pic1" src="assets/splash_pic1"/>
-                <img className="splash_pic2" src="assets/splash_pic2"/>
+                <img className="splash_pic1" src={window.splash_pic1}/>
+                <img className="splash_pic2" src={window.splash_pic2}/>
             </div>
         );
     }
