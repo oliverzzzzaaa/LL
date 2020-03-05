@@ -30,6 +30,8 @@ const App = () => (
 
 
         <h3 class="welcome-message">Welcome to your professional community</h3>
+
+        
     </div>
 );
 
