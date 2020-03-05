@@ -1,10 +1,33 @@
 .header-logo{
     content: url(https://i.imgur.com/mtLupon.png);
+    position: absolute;
+    left: 50px;
 }
 
 
-
-
 .login-signup {
-    color: red
+    position: absolute;
+    right: 150px;
+    font-size: larger;
+    color: #2867B2;
+}
+
+.welcome-message{
+    position: absolute;
+    top: 300px;
+    right: 40px;
+    color: #2867B2;
+    font-size: 40px;
+}
+
+body{
+    // background-color: #2977c9;
+    background-image: url();
+    margin-top: 10px;
+}
+.signup-form-container, .login-form-container{
+    position: relative;
+    // top: 200px;
+    margin-left: 20px;
+    top: 80px;
 }

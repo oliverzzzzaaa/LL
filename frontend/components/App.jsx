@@ -29,7 +29,7 @@ const App = () => (
         </h2>
 
 
-        <h3>Welcome to your professional community</h3>
+        <h3 class="welcome-message">Welcome to your professional community</h3>
     </div>
 );
 
