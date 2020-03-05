@@ -1,12 +1,12 @@
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
 # config/initializers/secret_token.rb
-config/master.key
+/config/master.key
 config/initializers/secret_token.rb
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
+/log/.keep
 !/tmp/.keep
 
 ## Environment normalization:
@@ -21,12 +21,18 @@ config/initializers/secret_token.rb
 # Ignore Byebug command history file.
 .byebug_history
 
+.DS_Store
+
+npm-debug.log
+
+/yarn-error.log/public/assets
+
 # Ignore node_modules
 /public/packs
 /public/packs-test
 /public/assets
 /tmp
 
-node_modules/
-bundle.js
+/node_modules/
+/bundle.js*
 bundle.js.map
