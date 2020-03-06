@@ -50,8 +50,9 @@ class Splash extends React.Component {
                 <Navbar />
 
                 <img className="splash_pic1" src={window.splash_pic1} />
+                <h1 class="welcome-message">Welcome to your professional community</h1>
                 <img className="splash_pic2" src={window.splash_pic2} />
-                <h3 classname="welcome-message">Welcome to your professional community</h3>
+                
                 {/* <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <label className="welcome-back">Welcome Back!</label>

@@ -13,6 +13,7 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
+import NotFound from "../../public/notfound";
 
 
 const App = () => (
@@ -25,14 +26,16 @@ const App = () => (
 
 
 
-        <h2>
+        <Switch>
             <AuthRoute path="/login" component={LogInFormContainer} />
             <AuthRoute path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/" component={SplashContainer} />
             <ProtectedRoute exact path='/feed' component={Feed} />
             <ProtectedRoute exact path='/connections' component={Connections} />
+            <AuthRoute component={NotFound} />
+            <ProtectedRoute component={NotFound} />
 
-        </h2>
+        </Switch>
 
 
         {/* <h3 class="welcome-message">Welcome to your professional community!!!</h3> */}
