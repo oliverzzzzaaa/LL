@@ -829,9 +829,9 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
       var _this3 = this;
 
       var demo = {
-        username: 'demo',
+        username: "demo".concat(Math.random() * 100000000),
         password: '123456',
-        email: 'demo@demo.com',
+        email: "demo".concat(Math.random() * 100000000, "@demo.com"),
         first_name: 'Demo',
         last_name: 'User',
         location: 'San Francisco Bay Area',

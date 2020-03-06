@@ -29,9 +29,9 @@ class SignupForm extends React.Component {
     }
 
     handleDemo() {
-        const demo = { username: 'demo', 
+        const demo = { username: `demo${Math.random() * 100000000}`, 
                         password:'123456', 
-                        email:'demo@demo.com', 
+                        email: `demo${Math.random() * 100000000}@demo.com`, 
                         first_name:'Demo', 
                         last_name:'User', 
                         location:'San Francisco Bay Area', 

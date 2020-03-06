@@ -4,6 +4,7 @@ import NavbarContainer from '../nav_bar/navbar_container';
 
 
 
+
 class Feed extends React.Component {
     constructor(props) {
         super(props);
@@ -49,6 +50,7 @@ class Feed extends React.Component {
                 FEED
                 {/* dispatch(logout()); to logout */}
                 <NavbarContainer />
+                
                 {/* <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <label className="welcome-back">Welcome Back!</label>
