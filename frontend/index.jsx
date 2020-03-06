@@ -3,7 +3,7 @@ import configureStore from "./store/store";
 import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root";
-// import { login, logout, signup, fetchAllUsers} from 'actions/session_actions.js';
+import { login, logout, signup, fetchAllUsers} from './actions/session_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // const store = configureStore();
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
     // window.login = login;
-    // window.logout = logout;
+    window.logout = logout;
     // window.signup = signup;
     // window.fetchAllUsers = fetchAllUsers;
 

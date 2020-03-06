@@ -25,30 +25,31 @@ export const receiveErrors = (errors) => ({
 });
 
 export const login = (formUser) => (dispatch) => {
-    APIUtil.login(formUser)
+    
+    return APIUtil.login(formUser)
       .then(user => dispatch(receiveCurrentUser(user)),
        (err) => dispatch(receiveErrors(err.responseJSON)));
 }
 
 export const logout = () => (dispatch) => {
-    APIUtil.logout()
+    return APIUtil.logout()
       .then(() => dispatch(logoutCurrentUser()));
 } 
 
 export const signup = (formUser) => (dispatch) => {
-    APIUtil.signup(formUser)
+    return APIUtil.signup(formUser)
       .then(user => { return dispatch(receiveCurrentUser(user)) },
        (err) => dispatch(receiveErrors(err.responseJSON)));   
 }
 
 export const fetchAllUsers = () => (dispatch) => {
-    APIUtil.fetchAllUsers()
+    return APIUtil.fetchAllUsers()
       .then(users => dispatch(receiveAllUsers(users)), 
        (err) => dispatch(receiveErrors(err.responseJSON)));
 }
 
 export const fetchUser = (userId) => (dispatch) => {
-    APIUtil.fetchUser(userId)
+    return APIUtil.fetchUser(userId)
       .then(user => dispatch(receiveCurrentUser(user)),
        (err) => dispatch(receiveErrors(err.responseJSON)));
 }

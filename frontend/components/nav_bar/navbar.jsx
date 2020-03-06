@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import { render } from 'react-dom';
+// import { Route, Redirect, withRouter } from 'react-router-dom';
 
 const Navbar = ({ currentUser, logout }) => {
     const sessionLinks = () => (
@@ -9,7 +9,6 @@ const Navbar = ({ currentUser, logout }) => {
             <button>
                 <Link to="/login">Sign in</Link>
             </button>
-
             &nbsp; &nbsp;
             <button>
                 <Link to="/signup">Join now</Link>
@@ -17,14 +16,34 @@ const Navbar = ({ currentUser, logout }) => {
 
         </nav>
     );
+
     const welcomePage = () => (
-        <hgroup className="header-group">
-            <h2 className="header-name">Hi, {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
+        <hgroup className="welcome-header">
+            <Link to="/feed" className="header-button-home">Home</Link>
+            <Link to="/connections" className="header-button-connections">My Network</Link>
+            <button className="header-button-jobs" onClick={logout}>Jobs</button>
+            <button className="header-button-messaging" onClick={logout}>Messaging</button>
+            <button className="header-button-logout" onClick={logout}>Log Out</button>
         </hgroup>
     );
 
-    return currentUser ? welcomePage() : sessionLinks();
+
+    if (currentUser) {
+        return (
+            <div className="welcome-page">
+                    {welcomePage()}
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <header className="page-header">
+                    {sessionLinks()}
+                </header>
+
+            </div>
+        )
+    }
 };
 
 

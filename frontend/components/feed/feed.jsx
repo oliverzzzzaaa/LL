@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import NavbarContainer from '../nav_bar/navbar_container';
 
-class LoginForm extends React.Component {
+
+
+class Feed extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +17,6 @@ class LoginForm extends React.Component {
             headline: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDemo = this.handleDemo.bind(this);
     }
 
     update(field) {
@@ -26,14 +29,6 @@ class LoginForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
-    }
-
-    handleDemo() {
-        const demo = {
-            username: 'demo',
-            password: '123456'
-        };
-        this.props.processForm(demo) //.then(() => this.props.history.push('/feed'));
     }
 
     renderErrors() {
@@ -51,34 +46,31 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
-                
-                <div className="login-form-container">
+                FEED
+                {/* dispatch(logout()); to logout */}
+                <NavbarContainer />
+                {/* <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <label className="welcome-back">Welcome Back</label>
-                        <br/>
-                        <br/>
-                        <h6 className="dontmiss">Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
-            <br />
-                        {/* Please {this.props.formType} or {this.props.navLink} */}
-                        
+                        <label className="welcome-back">Welcome Back!</label>
+                        <h6>Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
+                        <br />
+
                         {this.renderErrors()}
                         <div className="login-form">
                             <br />
-                            <label>
+                            <label>Username:
                 <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
                                     className="login-input"
-                                    placeholder="Username"
                                 />
                             </label>
                             <br />
-                            <label>
+                            <label>Password:
                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                     className="login-input"
-                                    placeholder="Password (6 or more characters)"
                                 />
                             </label>
                             <br />
@@ -86,19 +78,16 @@ class LoginForm extends React.Component {
 
                             <br />
                             <input className="session-submit" type="submit" value="Log In" />
-                            <br/>
-                            <button className='session-demo' onClick={this.handleDemo}>Demo User</button>
+
                         </div>
-                        <br/>
                         New to LinkedList? {this.props.navLink}
-                        <br/>
                     </form>
                 </div>
-                {/* <img className="splash_pic1" src={window.splash_pic1}/>
+                <img className="splash_pic1" src={window.splash_pic1}/>
                 <img className="splash_pic2" src={window.splash_pic2}/> */}
             </div>
         );
     }
 }
 
-export default LoginForm;
+export default Feed;

@@ -1,0 +1,53 @@
+.header-logo{
+    content: url(https://i.imgur.com/mtLupon.png);
+    position: absolute;
+    left: 50px;
+}
+
+
+.login-signup {
+    position: absolute;
+    right: 150px;
+    font-size: larger;
+    color: #2867B2;
+}
+
+.welcome-message{
+    position: absolute;
+    top: 400px;
+    max-width: 400px;
+    margin-left: 50px;
+    color: #0e76a8;
+    font-size: 50px;
+    white-space: initial;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    margin-top: 10px;
+    height: 1500px;
+}
+
+// .signup-form-container, .login-form-container{
+//     position: relative;
+//     // top: 200px;
+//     margin-left: 20px;
+//     top: 80px;
+// }
+
+.splash_pic1{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    width: 600px;
+    // z-index: -1;
+    display: flex;
+}
+
+.splash_pic2{
+    margin-top: 700px;
+}
+
+.login-signup{
+    border-color: blue;
+}
