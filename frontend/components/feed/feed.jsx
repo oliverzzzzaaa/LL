@@ -11,11 +11,9 @@ class Feed extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: '',
             first_name: '',
             last_name: '',
             location: '',
-            headline: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }

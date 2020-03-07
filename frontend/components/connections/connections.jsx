@@ -10,11 +10,9 @@ class Connections extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: '',
             first_name: '',
             last_name: '',
-            location: '',
-            headline: ''
+            location: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }

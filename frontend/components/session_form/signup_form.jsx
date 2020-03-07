@@ -6,11 +6,9 @@ class SignupForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: '',
             first_name: '',
             last_name: '',
             location: '',
-            headline: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
@@ -22,6 +20,10 @@ class SignupForm extends React.Component {
         });
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -29,9 +31,9 @@ class SignupForm extends React.Component {
     }
 
     handleDemo() {
-        const demo = { username: `demo${Math.random() * 100000000}`, 
+        const demo = {
+                        username: `demo${Math.random() * 100000000}@demo.com`, 
                         password:'123456', 
-                        email: `demo${Math.random() * 100000000}@demo.com`, 
                         first_name:'Demo', 
                         last_name:'User', 
                         location:'San Francisco Bay Area', 
@@ -54,7 +56,7 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div>
-
+                
                 
                 <div className="signup-form-container">
                     <form onSubmit={this.handleSubmit} className="signup-form-box">
@@ -70,7 +72,7 @@ class SignupForm extends React.Component {
                                     value={this.state.username}
                                     onChange={this.update('username')}
                                     className="signup-input"
-                                    placeholder="Username"
+                                    placeholder="Email/Username"
                                 />
                             </label>
                             <br />
@@ -84,15 +86,6 @@ class SignupForm extends React.Component {
                             </label>
                             <br/>
 
-                            <label>
-                                <input type="text"
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
-                                    className="signup-input"
-                                    placeholder="Email"
-                                />
-                            </label>
-                            <br />
 
                             <label>
                                 <input type="text"
@@ -124,18 +117,9 @@ class SignupForm extends React.Component {
                             </label>
                             <br />
 
-                            <label>
-                                <input type="text"
-                                    value={this.state.headline}
-                                    onChange={this.update('headline')}
-                                    className="signup-input"
-                                    placeholder="Headline"
-                                />
-                            </label>
-                            <br />
-
                             <br />
                             <input className="session-submit" type="submit" value="Join" />
+                            <br/>
                             <br/>
                             <button className='session-demo' onClick={this.handleDemo}>Demo User</button>
                         </div>

@@ -10,7 +10,6 @@ class Splash extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: '',
             first_name: '',
             last_name: '',
             location: '',

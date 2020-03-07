@@ -6,20 +6,53 @@ class LoginForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: '',
             first_name: '',
             last_name: '',
             location: '',
-            headline: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+        this.displayusererr = this.displayusererr.bind(this);
+        this.displaypassworderr = this.displaypassworderr.bind(this);
+    }
+
+    displayusererr(){
+        let errorOutput = "";
+        this.props.errors.forEach( (ele) => {
+                if(ele === 'Invalid email'){
+                    errorOutput += ele;
+                }
+            }
+        )
+        return (
+            <div>
+                {errorOutput}
+            </div>
+        )
+    }
+    displaypassworderr() {
+        let errorOutput = "";
+        this.props.errors.forEach((ele) => {
+            if (ele !== 'Invalid email') {
+                errorOutput += ele;
+            }
+        }
+        )
+        return (
+            <div>
+                {errorOutput}
+            </div>
+        )
     }
 
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     handleSubmit(e) {
@@ -30,7 +63,7 @@ class LoginForm extends React.Component {
 
     handleDemo() {
         const demo = {
-            username: 'demo',
+            username: 'demo@demo.com',
             password: '123456'
         };
         this.props.processForm(demo) //.then(() => this.props.history.push('/feed'));
@@ -38,7 +71,7 @@ class LoginForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="login-error">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -59,43 +92,46 @@ class LoginForm extends React.Component {
                         <br/>
                         <h6 className="dontmiss">Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
             <br />
-                        {/* Please {this.props.formType} or {this.props.navLink} */}
                         
-                        {this.renderErrors()}
+                        {/* {this.renderErrors()} */}
                         <div className="login-form">
                             <br />
-                            <label>
-                <input type="text"
+                            {/* <label className="form__label--floating" aria-hidden="true"> */}
+                            <label className="form__label--floating" aria-hidden="true">
+                                <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
                                     className="login-input"
-                                    placeholder="Username"
+                                    placeholder="Email"
                                 />
                             </label>
+                            <div className="username-error">
+                                {this.displayusererr()}
+                            </div>
                             <br />
                             <label>
-                <input type="password"
+                                <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                     className="login-input"
                                     placeholder="Password (6 or more characters)"
                                 />
                             </label>
+                            <div className="password-error">{this.displaypassworderr()}</div>
                             <br />
 
 
                             <br />
-                            <input className="session-submit" type="submit" value="Log In" />
+                            <input className="session-submit" type="submit" value="Sign In" />
+                            <br/>
                             <br/>
                             <button className='session-demo' onClick={this.handleDemo}>Demo User</button>
                         </div>
                         <br/>
-                        New to LinkedList? {this.props.navLink}
+                        <h2 className="new-to-linkedlist">New to LinkedList? {this.props.navLink}</h2>
                         <br/>
                     </form>
                 </div>
-                {/* <img className="splash_pic1" src={window.splash_pic1}/>
-                <img className="splash_pic2" src={window.splash_pic2}/> */}
             </div>
         );
     }

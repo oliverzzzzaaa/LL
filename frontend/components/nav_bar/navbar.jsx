@@ -6,11 +6,11 @@ import { render } from 'react-dom';
 const Navbar = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
-            <button>
+            <button className="navbar-login-button">
                 <Link to="/login">Sign in</Link>
             </button>
             &nbsp; &nbsp;
-            <button>
+            <button className="navbar-signup-button">
                 <Link to="/signup">Join now</Link>
             </button>
 
