@@ -87,17 +87,21 @@ class LoginForm extends React.Component {
                 
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <label className="welcome-back">Welcome Back</label>
+                        <br/>
+                        <div className="login-logo"></div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <label className="login-welcome-back">Welcome Back</label>
                         <br/>
                         <br/>
                         <h6 className="dontmiss">Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
-            <br />
+                        <br />
                         
                         {/* {this.renderErrors()} */}
                         <div className="login-form">
                             <br />
-                            {/* <label className="form__label--floating" aria-hidden="true"> */}
-                            <label className="form__label--floating" aria-hidden="true">
+                            <label className="login-username-textbox" aria-hidden="true">
                                 <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
@@ -109,7 +113,7 @@ class LoginForm extends React.Component {
                                 {this.displayusererr()}
                             </div>
                             <br />
-                            <label>
+                            <label className="login-password-textbox">
                                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
@@ -122,10 +126,10 @@ class LoginForm extends React.Component {
 
 
                             <br />
-                            <input className="session-submit" type="submit" value="Sign In" />
+                            <input className="login-session-submit" type="submit" value="Sign In" />
                             <br/>
                             <br/>
-                            <button className='session-demo' onClick={this.handleDemo}>Demo User</button>
+                            <button className="login-session-demo" onClick={this.handleDemo}>Demo User</button>
                         </div>
                         <br/>
                         <h2 className="new-to-linkedlist">New to LinkedList? {this.props.navLink}</h2>

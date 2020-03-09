@@ -50,7 +50,14 @@ class Splash extends React.Component {
 
                 <img className="splash_pic1" src={window.splash_pic1} />
                 <h1 class="welcome-message">Welcome to your professional community</h1>
-                <img className="splash_pic2" src={window.splash_pic2} />
+                <div class="container_splash_pic2">
+                    <img className="splash_pic2" src={window.splash_pic2} />  
+                    <div class="message_splash_pic2">Join your colleagues, classmates, and friends on LinkedList.</div>
+                    <button className="alternative-signup-button" type="button" >
+                        <Link to="/signup" >Get Started</Link>
+                    </button>
+                </div>
+                
                 
                 {/* <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">

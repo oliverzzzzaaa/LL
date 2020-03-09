@@ -37,11 +37,6 @@ const App = () => (
 
         </Switch>
 
-
-        {/* <h3 class="welcome-message">Welcome to your professional community!!!</h3> */}
-
-        {/* <img className="splash_pic1" src={window.splash_pic1} />
-        <img className="splash_pic2" src={window.splash_pic2} /> */}
     </div>
 );
 

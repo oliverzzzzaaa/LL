@@ -475,14 +475,14 @@ var Navbar = function Navbar(_ref) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "navbar-login-button"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/login"
-    }, "Sign in")), "\xA0 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "navbar-signup-button"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/signup"
-    }, "Join now")));
+    }, "Join now")), "\xA0 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "navbar-login-button"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/login"
+    }, "Sign in")));
   };
 
   var welcomePage = function welcomePage() {
@@ -714,14 +714,16 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "login-form-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "welcome-back"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-logo"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "login-welcome-back"
       }, "Welcome Back"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
         className: "dontmiss"
       }, "Don't miss your next opportunity. Sign in to stay updated on your professional world."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "form__label--floating",
+        className: "login-username-textbox",
         "aria-hidden": "true"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -731,7 +733,9 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         placeholder: "Email"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "username-error"
-      }, this.displayusererr()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, this.displayusererr()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "login-password-textbox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password'),
@@ -740,11 +744,11 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "password-error"
       }, this.displaypassworderr()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "session-submit",
+        className: "login-session-submit",
         type: "submit",
         value: "Sign In"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "session-demo",
+        className: "login-session-demo",
         onClick: this.handleDemo
       }, "Demo User")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "new-to-linkedlist"
@@ -914,38 +918,44 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "signup-logo"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "signup-form-box"
-      }, "Make the most of your professional life", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Make the most of your professional life", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "signup-errors"
+      }, this.renderErrors()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.username,
         onChange: this.update('username'),
         className: "signup-input",
         placeholder: "Email/Username"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Password (6 or more characters)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password'),
         className: "signup-input",
         placeholder: "Password (6 or more characters)"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.first_name,
         onChange: this.update('first_name'),
         className: "signup-input",
         placeholder: "First Name"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.last_name,
         onChange: this.update('last_name'),
         className: "signup-input",
         placeholder: "Last Name"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Location"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.location,
         onChange: this.update('location'),
@@ -958,16 +968,173 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "session-demo",
         onClick: this.handleDemo
-      }, "Demo User"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, "Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "already-on-linkedlist"
-      }, "Already on LinkedList? ", this.props.navLink)));
+      }, "Already on LinkedList? ", this.props.navLink))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
     }
   }]);
 
   return SignupForm;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (SignupForm);
+/* harmony default export */ __webpack_exports__["default"] = (SignupForm); // import React from 'react';
+// class SignupForm extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             username: '',
+//             password: '',
+//             first_name: '',
+//             last_name: '',
+//             location: '',
+//         };
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//         this.handleDemo = this.handleDemo.bind(this);
+//         this.displayusererr = this.displayusererr.bind(this);
+//         this.displaypassworderr = this.displaypassworderr.bind(this);
+//     }
+//     displayusererr() {
+//         let errorOutput = "";
+//         this.props.errors.forEach((ele) => {
+//             if (ele === 'Username is invalid') {
+//                 errorOutput += ele;
+//             }
+//         }
+//         )
+//         return (
+//             <div>
+//                 {errorOutput}
+//             </div>
+//         )
+//     }
+//     displaypassworderr() {
+//         let errorOutput = "";
+//         this.props.errors.forEach((ele) => {
+//             if (ele !== 'Username is invalid') {
+//                 errorOutput += ele;
+//             }
+//         }
+//         )
+//         return (
+//             <div>
+//                 {errorOutput}
+//             </div>
+//         )
+//     }
+//     update(field) {
+//         return e => this.setState({
+//             [field]: e.currentTarget.value
+//         });
+//     }
+//     componentWillUnmount() {
+//         this.props.clearErrors();
+//     }
+//     handleSubmit(e) {
+//         e.preventDefault();
+//         const user = Object.assign({}, this.state);
+//         this.props.processForm(user);
+//     }
+//     handleDemo() {
+//         const demo = {
+//                         username: `demo${Math.random() * 100000000}@demo.com`, 
+//                         password:'123456', 
+//                         first_name:'Demo', 
+//                         last_name:'User', 
+//                         location:'San Francisco Bay Area', 
+//                         headline: 'Software Engineer' };
+//         this.props.processForm(demo).then(() => this.props.history.push('/feed')); 
+//     }
+//     renderErrors() {
+//         return (
+//             <ul>
+//                 {this.props.errors.map((error, i) => (
+//                     <li className="signup-errors" key={`error-${i}`}>
+//                         {error}
+//                     </li>
+//                 ))}
+//             </ul>
+//         );
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <div className="signup-form-container">
+//                     <form onSubmit={this.handleSubmit} className="signup-form-box">
+//                         Make the most of your professional life
+//             <br />
+//                         {/* Please {this.props.formType} or {this.props.navLink} */}
+//                         {/* {this.renderErrors()} */}
+//                         <div className="signup-form">
+//                             <br />
+//                             <label>
+//                                 <input type="text"
+//                                     value={this.state.username}
+//                                     onChange={this.update('username')}
+//                                     className="signup-input"
+//                                     placeholder="Email/Username"
+//                                 />
+//                             </label>
+//                             <div className="username-error">
+//                                 {this.displayusererr()}
+//                             </div>
+//                             <br />
+//                             <label>
+//                                 <input type="password"
+//                                     value={this.state.password}
+//                                     onChange={this.update('password')}
+//                                     className="signup-input"
+//                                     placeholder="Password (6 or more characters)"
+//                                 />
+//                             </label>
+//                             <div className="password-error">{this.displaypassworderr()}</div>
+//                             <br/>
+//                             <label>
+//                                 <input type="text"
+//                                     value={this.state.first_name}
+//                                     onChange={this.update('first_name')}
+//                                     className="signup-input"
+//                                     placeholder="First Name"
+//                                 />
+//                             </label>
+//                             <br />
+//                             <br />
+//                             <label>
+//                                 <input type="text"
+//                                     value={this.state.last_name}
+//                                     onChange={this.update('last_name')}
+//                                     className="signup-input"
+//                                     placeholder="Last Name"
+//                                 />
+//                             </label>
+//                             <br />
+//                             <br />
+//                             <label>
+//                                 <input type="text"
+//                                     value={this.state.location}
+//                                     onChange={this.update('location')}
+//                                     className="signup-input"
+//                                     placeholder="Location"
+//                                 />
+//                             </label>
+//                             <br />
+//                             <br />
+//                             <br />
+//                             <input className="session-submit" type="submit" value="Join" />
+//                             <br/>
+//                             <br/>
+//                             <button className='session-demo' onClick={this.handleDemo}>Demo User</button>
+//                         </div>
+//                     </form>
+//                     <br />
+//                     <label className="already-on-linkedlist">Already on LinkedList? {this.props.navLink}</label>
+//                 </div>
+//                 {/* <img className="splash_pic1" src={window.splash_pic1} />
+//                 <img className="splash_pic2" src={window.splash_pic2} /> */}
+//             </div>
+//         );
+//     }
+// }
+// export default SignupForm;
 
 /***/ }),
 
@@ -998,7 +1165,8 @@ var mapStateToProps = function mapStateToProps(_ref) {
     errors: errors.session,
     formType: 'signup',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/login"
+      to: "/login",
+      className: "navlink"
     }, "Sign in")
   };
 };
@@ -1112,10 +1280,19 @@ var Splash = /*#__PURE__*/function (_React$Component) {
         src: window.splash_pic1
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         "class": "welcome-message"
-      }, "Welcome to your professional community"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, "Welcome to your professional community"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "container_splash_pic2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "splash_pic2",
         src: window.splash_pic2
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "message_splash_pic2"
+      }, "Join your colleagues, classmates, and friends on LinkedList."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "alternative-signup-button",
+        type: "button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/signup"
+      }, "Get Started"))));
     }
   }]);
 
@@ -1460,12 +1637,14 @@ var ProtectedRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withR
 /*!*******************************************!*\
   !*** ./frontend/util/session_api_util.js ***!
   \*******************************************/
-/*! exports provided: signup, login, logout */
+/*! exports provided: signup, fetchAllUsers, fetchUser, login, logout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signup", function() { return signup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 var signup = function signup(formUser) {
@@ -1476,19 +1655,19 @@ var signup = function signup(formUser) {
       user: formUser
     }
   });
-}; // export const fetchAllUsers = () => (
-//     $.ajax({
-//         method: "GET",
-//         url: "/api/users"
-//     })
-// )
-// export const fetchUser = (userId) => {
-//     $.ajax({
-//         method: "GET",
-//         url: `/api/users/${userId}`
-//     })
-// }
-
+};
+var fetchAllUsers = function fetchAllUsers() {
+  return $.ajax({
+    method: "GET",
+    url: "/api/users"
+  });
+};
+var fetchUser = function fetchUser(userId) {
+  $.ajax({
+    method: "GET",
+    url: "/api/users/".concat(userId)
+  });
+};
 var login = function login(formUser) {
   return $.ajax({
     method: "POST",

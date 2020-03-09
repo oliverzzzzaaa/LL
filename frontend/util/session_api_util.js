@@ -8,19 +8,19 @@ export const signup = (formUser) => (
     })
 )
 
-// export const fetchAllUsers = () => (
-//     $.ajax({
-//         method: "GET",
-//         url: "/api/users"
-//     })
-// )
+export const fetchAllUsers = () => (
+    $.ajax({
+        method: "GET",
+        url: "/api/users"
+    })
+)
 
-// export const fetchUser = (userId) => {
-//     $.ajax({
-//         method: "GET",
-//         url: `/api/users/${userId}`
-//     })
-// }
+export const fetchUser = (userId) => {
+    $.ajax({
+        method: "GET",
+        url: `/api/users/${userId}`
+    })
+}
 
 export const login = (formUser) => (
     $.ajax({
