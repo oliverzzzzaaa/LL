@@ -39,7 +39,11 @@
     background-color: #0073b1;
     color: white;
     width: 400px;  height: 3em;
-    // display: inline-block;
+    border-radius: 4px;
+}
+
+.login-session-submit:hover , .login-session-demo:hover {
+    background-color: #0064b1;
 }
 
 .username-error, .password-error{
@@ -52,12 +56,22 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.new-join-link{
+    font-size: 14pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0073b1;
+}
+
+
+.new-to-linkedlist, .new-join-link{
+    display: inline;
+}
+
 .floating-label-wrap{
     position: relative;
     margin-bottom: 1.5rem;
 }
 
-//add these back after experimenting with floats
 .login-input-username{
     font-size:14pt;
     // height:420px;
@@ -67,6 +81,7 @@
     border-style: solid;
     // display: inline-block;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 4px;
 }
 
 .login-input-password{
@@ -78,6 +93,7 @@
     border-style: solid;
     // display: inline-block;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 4px;
 }
 
 
@@ -88,8 +104,8 @@
     transition: all 200ms;
 //   opacity: 0.5;
     opacity: 1;
-    left: 510px;
-    top: 20px;
+    // left: 510px;
+    // top: 20px;
     background-color: transparent;
     font-size: 20px;
 }

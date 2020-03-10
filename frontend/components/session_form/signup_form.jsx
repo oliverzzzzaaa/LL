@@ -30,7 +30,8 @@ class SignupForm extends React.Component {
         this.props.processForm(user);
     }
 
-    handleDemo() {
+    handleDemo(e) {
+        e.preventDefault();
         const demo = {
             username: `demo${Math.random() * 100000000}@demo.com`,
             password: '123456',
@@ -39,7 +40,7 @@ class SignupForm extends React.Component {
             location: 'San Francisco Bay Area',
             headline: 'Software Engineer'
         };
-        this.props.processForm(demo).then(() => this.props.history.push('/feed'));
+        this.props.processForm(demo) //.then(() => this.props.history.push('/feed'));
     }
 
     renderErrors() {
@@ -138,7 +139,8 @@ class SignupForm extends React.Component {
                         <br/>
                         <br/>
 
-                        <h1 className="already-on-linkedlist">Already on LinkedList? {this.props.navLink}</h1>
+                        <div className="already-on-linkedlist">Already on LinkedList? </div>
+                        <div className="already-signin-link">{this.props.navLink}</div>
                     </div>
                 </form>
                 <br />

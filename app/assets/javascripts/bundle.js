@@ -474,7 +474,7 @@ var Navbar = function Navbar(_ref) {
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "navbar-signup-button"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/signup"
@@ -688,7 +688,8 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleDemo",
-    value: function handleDemo() {
+    value: function handleDemo(e) {
+      e.preventDefault();
       var demo = {
         username: 'demo@demo.com',
         password: '123456'
@@ -755,16 +756,156 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "login-session-demo",
         onClick: this.handleDemo
-      }, "Demo User")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      }, "Demo User")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "new-to-linkedlist"
-      }, "New to LinkedList? ", this.props.navLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))));
+      }, "New to LinkedList? "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "new-join-link"
+      }, this.props.navLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))));
     }
   }]);
 
   return LoginForm;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (LoginForm);
+/* harmony default export */ __webpack_exports__["default"] = (LoginForm); // import React from 'react';
+// class LoginForm extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             username: '',
+//             password: '',
+//             first_name: '',
+//             last_name: '',
+//             location: '',
+//         };
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//         this.handleDemo = this.handleDemo.bind(this);
+//         this.displayusererr = this.displayusererr.bind(this);
+//         this.displaypassworderr = this.displaypassworderr.bind(this);
+//     }
+//     displayusererr() {
+//         let errorOutput = "";
+//         this.props.errors.forEach((ele) => {
+//             if (ele === 'Invalid email') {
+//                 errorOutput += ele;
+//             }
+//         }
+//         )
+//         return (
+//             <div>
+//                 {errorOutput}
+//             </div>
+//         )
+//     }
+//     displaypassworderr() {
+//         let errorOutput = "";
+//         this.props.errors.forEach((ele) => {
+//             if (ele !== 'Invalid email') {
+//                 errorOutput += ele;
+//             }
+//         }
+//         )
+//         return (
+//             <div>
+//                 {errorOutput}
+//             </div>
+//         )
+//     }
+//     update(field) {
+//         return e => this.setState({
+//             [field]: e.currentTarget.value
+//         });
+//     }
+//     componentWillUnmount() {
+//         this.props.clearErrors();
+//     }
+//     handleSubmit(e) {
+//         e.preventDefault();
+//         const user = Object.assign({}, this.state);
+//         this.props.processForm(user);
+//     }
+//     handleDemo() {
+//         const demo = {
+//             username: 'demo@demo.com',
+//             password: '123456'
+//         };
+//         this.props.processForm(demo) //.then(() => this.props.history.push('/feed'));
+//     }
+//     renderErrors() {
+//         return (
+//             <ul className="login-error">
+//                 {this.props.errors.map((error, i) => (
+//                     <li key={`error-${i}`}>
+//                         {error}
+//                     </li>
+//                 ))}
+//             </ul>
+//         );
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <div className="login-form-container">
+//                     <form onSubmit={this.handleSubmit} className="login-form-box">
+//                         <br />
+//                         <div className="login-logo"></div>
+//                         <br />
+//                         <br />
+//                         <br />
+//                         <label className="login-welcome-back">Welcome Back</label>
+//                         <br />
+//                         <br />
+//                         <h6 className="dontmiss">Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
+//                         <br />
+//                         {/* {this.renderErrors()} */}
+//                         <div className="login-form">
+//                             <br />
+//                             <div className="floating-label-wrap">
+//                                 <input type="text"
+//                                     value={this.state.username}
+//                                     onChange={this.update('username')}
+//                                     className="login-input-username"
+//                                     // placeholder="Email"
+//                                     required
+//                                 />
+//                                 <label className="login-username-label" >
+//                                     Email
+//                                 </label>
+//                             </div>
+//                             <div className="username-error">
+//                                 {this.displayusererr()}
+//                             </div>
+//                             <br />
+//                             <div className="floating-label-wrap">
+//                                 <input type="password"
+//                                     value={this.state.password}
+//                                     onChange={this.update('password')}
+//                                     className="login-input-password"
+//                                     // placeholder="Password (6 or more characters)"
+//                                     required
+//                                 />
+//                                 <label className="login-password-label">
+//                                     Password
+//                                 </label>
+//                             </div>
+//                             <div className="password-error">{this.displaypassworderr()}</div>
+//                             <br />
+//                             <br />
+//                             <input className="login-session-submit" type="submit" value="Sign In" />
+//                             <br />
+//                             <br />
+//                             <button className="login-session-demo" onClick={this.handleDemo}>Demo User</button>
+//                         </div>
+//                         <br />
+//                         <div className="new-to-linkedlist">New to LinkedList? </div> <div className="new-join-link">{this.props.navLink}</div>
+//                         <br />
+//                     </form>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
+// export default LoginForm;
 
 /***/ }),
 
@@ -895,9 +1036,8 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleDemo",
-    value: function handleDemo() {
-      var _this3 = this;
-
+    value: function handleDemo(e) {
+      e.preventDefault();
       var demo = {
         username: "demo".concat(Math.random() * 100000000, "@demo.com"),
         password: '123456',
@@ -906,9 +1046,7 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         location: 'San Francisco Bay Area',
         headline: 'Software Engineer'
       };
-      this.props.processForm(demo).then(function () {
-        return _this3.props.history.push('/feed');
-      });
+      this.props.processForm(demo); //.then(() => this.props.history.push('/feed'));
     }
   }, {
     key: "renderErrors",
@@ -981,9 +1119,11 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "session-demo",
         onClick: this.handleDemo
-      }, "Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      }, "Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "already-on-linkedlist"
-      }, "Already on LinkedList? ", this.props.navLink))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+      }, "Already on LinkedList? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "already-signin-link"
+      }, this.props.navLink))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
     }
   }]);
 
