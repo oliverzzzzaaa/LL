@@ -1,8 +1,6 @@
 .login-form-container{
     position: relative;
-    // top: 200px;
     margin-left: 20px;
-    // top: 80px;
     text-align: center;
     background-color: white;
 }
@@ -13,25 +11,21 @@
     height: 20px;
 }
 
-.login-input{
-    font-size:14pt;
-    // height:420px;
-    width: 400px;
-    height: 3em;
-    border-style: solid;
-    // display: inline-block;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+
 
 .login-welcome-back{
     font-size: 24px;
     background-color: white;
+    left: 45%;
+    // display: inline-block;
+    // text-align: center;
 }
 
 .login-form-box{
     font-size: 18pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    // text-align: center;
+    
 }
 
 .dontmiss{
@@ -53,9 +47,76 @@
     font-size: 14px;
 }
 
-
-
 .new-to-linkedlist{
     font-size: 14pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.floating-label-wrap{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+//add these back after experimenting with floats
+.login-input-username{
+    font-size:14pt;
+    // height:420px;
+    width: 400px;
+    height: 3em;
+    border-style: solid;
+    // display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.login-input-password{
+    font-size:14pt;
+    // height:420px;
+    width: 400px;
+    height: 3em;
+    border-style: solid;
+    // display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.login-username-label{
+    position: absolute;
+    top: 0;
+    padding: 0px 0 0 13px;
+    transition: all 200ms;
+//   opacity: 0.5;
+    opacity: 1;
+    left: 510px;
+    top: 20px;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.login-password-label{
+    position: absolute;
+    top: 0;
+    padding: 0px 0 0 13px;
+    transition: all 200ms;
+//   opacity: 0.5;
+    opacity: 1;
+    left: 510px;
+    top: 20px;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+
+.login-input-username:focus + .login-username-label,
+.login-input-username:valid + .login-username-label{
+  font-size: 50%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+.login-input-password:focus + .login-password-label,
+.login-input-password:valid + .login-password-label{
+// .login-input-password:focus + .login-password-label{
+  font-size: 50%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
 }

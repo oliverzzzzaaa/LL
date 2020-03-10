@@ -81,6 +81,9 @@ class LoginForm extends React.Component {
         );
     }
 
+
+
+
     render() {
         return (
             <div>
@@ -101,26 +104,36 @@ class LoginForm extends React.Component {
                         {/* {this.renderErrors()} */}
                         <div className="login-form">
                             <br />
-                            <label className="login-username-textbox" aria-hidden="true">
-                                <input type="text"
-                                    value={this.state.username}
-                                    onChange={this.update('username')}
-                                    className="login-input"
-                                    placeholder="Email"
-                                />
-                            </label>
+                            <div className="floating-label-wrap">
+                                    <input type="text"
+                                        value={this.state.username}
+                                        onChange={this.update('username')}
+                                        className="login-input-username"
+                                        // placeholder="Email"
+                                        required
+                                    />
+                                <label className="login-username-label" >
+                                    Email
+                                </label>
+                            </div>
                             <div className="username-error">
                                 {this.displayusererr()}
                             </div>
                             <br />
-                            <label className="login-password-textbox">
+
+                            <div className="floating-label-wrap">
                                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
-                                    className="login-input"
-                                    placeholder="Password (6 or more characters)"
+                                    className="login-input-password"
+                                    // placeholder="Password (6 or more characters)"
+                                    required
                                 />
-                            </label>
+                                <label className="login-password-label">
+                                    Password
+                                </label>
+                            </div>
+
                             <div className="password-error">{this.displaypassworderr()}</div>
                             <br />
 
