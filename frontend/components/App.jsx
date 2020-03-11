@@ -18,9 +18,9 @@ import NotFound from "../../public/notfound";
 
 const App = () => (
     <div>
-        <Link to="/" className="header-link">
+        {/* <Link to="/" className="header-link">
             <div className="header-logo"></div>
-        </Link>
+        </Link> */}
 
 
 

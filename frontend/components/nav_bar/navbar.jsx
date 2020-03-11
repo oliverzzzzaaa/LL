@@ -6,6 +6,11 @@ import { render } from 'react-dom';
 const Navbar = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
+            <div>
+                <Link to="/" className="header-link">
+                    <div className="header-logo"></div>
+                </Link>
+            </div>
             <br/>
             <button className="navbar-signup-button">
                 <Link to="/signup">Join now</Link>
@@ -18,13 +23,19 @@ const Navbar = ({ currentUser, logout }) => {
     );
 
     const welcomePage = () => (
-        <hgroup className="welcome-header">
-            <Link to="/feed" className="header-button-home">Home</Link>
-            <Link to="/connections" className="header-button-connections">My Network</Link>
-            <button className="header-button-jobs" onClick={logout}>Jobs</button>
-            <button className="header-button-messaging" onClick={logout}>Messaging</button>
-            <button className="header-button-logout" onClick={logout}>Log Out</button>
-        </hgroup>
+        <div className="welcome-navbar">
+            <Link to="/feed" className="header-link">
+                <div className="list-logo"></div>
+            </Link>
+        
+            <hgroup className="welcome-header">
+                <button className="header-button-home"><Link to="/feed" >Home</Link></button>
+                <button className="header-button-connections"><Link to="/connections" >My Network</Link></button>
+                <button className="header-button-jobs" onClick={logout}>Jobs</button>
+                <button className="header-button-messaging" onClick={logout}>Messaging</button>
+                <button className="header-button-logout" onClick={logout}>Log Out</button>
+            </hgroup>
+        </div>
     );
 
 

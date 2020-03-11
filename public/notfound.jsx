@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => (
     <div >
+        <Link to="/" className="header-link">
+            <div className="header-logo"></div>
+        </Link>
 
-        {/* <img src={PageNotFound} style={{ width: 400, height: 400, display: 'block', margin: 'auto', position: 'relative' }} /> */}
         <h1 class="notfound-content">
             
             <br/>

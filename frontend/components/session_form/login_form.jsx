@@ -102,7 +102,6 @@ class LoginForm extends React.Component {
                         <h6 className="dontmiss">Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
                         <br />
                         
-                        {/* {this.renderErrors()} */}
                         <div className="login-form">
                             <br />
                             <div className="floating-label-wrap">

@@ -56,6 +56,7 @@ class SignupForm extends React.Component {
     }
 
     render() {
+        scroll(0, 0)  //opens at top of page instead of scrolled part of the way down
         return (
             <div className="signup-form-container">
                 <div className="signup-logo"></div>

@@ -45,7 +45,7 @@ class Feed extends React.Component {
     render() {
         return (
             <div>
-                FEED
+                
                 {/* dispatch(logout()); to logout */}
                 <NavbarContainer />
                 
