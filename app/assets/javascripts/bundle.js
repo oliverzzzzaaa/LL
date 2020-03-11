@@ -732,7 +732,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "login-input-username" // placeholder="Email"
         ,
         required: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-username-label"
       }, "Email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "username-error"
@@ -745,7 +745,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "login-input-password" // placeholder="Password (6 or more characters)"
         ,
         required: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-password-label"
       }, "Password")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "password-error"

@@ -106,16 +106,16 @@ class LoginForm extends React.Component {
                         <div className="login-form">
                             <br />
                             <div className="floating-label-wrap">
-                                    <input type="text"
-                                        value={this.state.username}
-                                        onChange={this.update('username')}
-                                        className="login-input-username"
-                                        // placeholder="Email"
-                                        required
-                                    />
-                                <label className="login-username-label" >
+                                <input type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    className="login-input-username"
+                                    // placeholder="Email"
+                                    required
+                                />
+                                <div className="login-username-label" >
                                     Email
-                                </label>
+                                </div>
                             </div>
                             <div className="username-error">
                                 {this.displayusererr()}
@@ -130,9 +130,9 @@ class LoginForm extends React.Component {
                                     // placeholder="Password (6 or more characters)"
                                     required
                                 />
-                                <label className="login-password-label">
+                                <div className="login-password-label">
                                     Password
-                                </label>
+                                </div>
                             </div>
 
                             <div className="password-error">{this.displaypassworderr()}</div>
