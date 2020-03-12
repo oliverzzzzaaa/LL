@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContainer from '../nav_bar/navbar_container';
+import { openModal} from '../../actions/modal_actions';
 
 
 
@@ -45,46 +46,57 @@ class Feed extends React.Component {
     render() {
         return (
             <div>
-                
-                {/* dispatch(logout()); to logout */}
                 <NavbarContainer />
-                
-                {/* <div className="login-form-container">
-                    <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <label className="welcome-back">Welcome Back!</label>
-                        <h6>Don't miss your next opportunity. Sign in to stay updated on your professional world.</h6>
-                        <br />
-
-                        {this.renderErrors()}
-                        <div className="login-form">
-                            <br />
-                            <label>Username:
-                <input type="text"
-                                    value={this.state.username}
-                                    onChange={this.update('username')}
-                                    className="login-input"
-                                />
-                            </label>
-                            <br />
-                            <label>Password:
-                <input type="password"
-                                    value={this.state.password}
-                                    onChange={this.update('password')}
-                                    className="login-input"
-                                />
-                            </label>
-                            <br />
-
-
-                            <br />
-                            <input className="session-submit" type="submit" value="Log In" />
-
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div className="feed-container">
+                    <div className="feed-profile-container">
+                        <div className="feed-profile-background"></div>
+                        <div className="feed-profile-info">
+                            <div id="feed-img"></div>
+                            <div id="feed-name">Albert Chen</div>
+                            <div id="feed-title">Student</div>
                         </div>
-                        New to LinkedList? {this.props.navLink}
-                    </form>
+                        <hr/>
+                        <div className="feed-num">
+                            <div className="feed-num-container">
+                                <div id="feed-num-views-text">Who viewed your profile</div>
+                                <div id="feed-num-views-num">0</div>
+                            </div>
+                            <br/>
+                            <div id="feed-num-container">
+                                <div id="feed-num-connections-text">Connections</div>
+                                <div id="feed-num-connections-num">1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="post-container">
+                        <div className="post-create">
+                            <div className="post-create-container">
+
+                                <div className='icon-create' onClick={() => this.props.openModal('create post', { user: this.props.currentUser })}>
+                                    <div className="icon-post">
+                                        <i className="ff-edit"></i>
+                                    </div>
+                                    <div className="icon-text">&nbsp; Start a post</div>
+                                </div>
+                                <div className='icon-post'><i className="icon-camera" onClick={e => alert("feature not available")} ></i></div>
+                                <div className='icon-post'><i className="icon-video" onClick={e => alert("feature not available")} ></i></div>
+                                <div className='icon-post'><i className="icon-doc" onClick={e => alert("feature not available")}></i></div>
+                            </div>
+                            <div className='write-article' onClick={e => alert("feature not available")}>Write an article on LinkedList</div>
+                        </div>
+                        <div className="post-list"></div>
+                    </div>
+                    <div className="news-container">
+                        Today’s news and views
+                    </div>
                 </div>
-                <img className="splash_pic1" src={window.splash_pic1}/>
-                <img className="splash_pic2" src={window.splash_pic2}/> */}
+                
+                
             </div>
         );
     }

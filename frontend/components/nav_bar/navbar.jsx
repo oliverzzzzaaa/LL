@@ -27,12 +27,12 @@ const Navbar = ({ currentUser, logout }) => {
             <Link to="/feed" className="header-link">
                 <div className="list-logo"></div>
             </Link>
-        
+            
             <hgroup className="welcome-header">
                 <button className="header-button-home"><Link to="/feed" >Home</Link></button>
                 <button className="header-button-connections"><Link to="/connections" >My Network</Link></button>
-                <button className="header-button-jobs" onClick={logout}>Jobs</button>
-                <button className="header-button-messaging" onClick={logout}>Messaging</button>
+                <button className="header-button-jobs" >Jobs</button>
+                <button className="header-button-messaging">Messaging</button>
                 <button className="header-button-logout" onClick={logout}>Log Out</button>
             </hgroup>
         </div>
