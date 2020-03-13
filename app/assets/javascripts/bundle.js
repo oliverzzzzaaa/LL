@@ -425,7 +425,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
+ //need a container for openmodal for dispatch to props 
 
 var Feed = /*#__PURE__*/function (_React$Component) {
   _inherits(Feed, _React$Component);
@@ -554,7 +554,9 @@ var Feed = /*#__PURE__*/function (_React$Component) {
         }
       }, "Write an article on LinkedList")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-list"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-container"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "news-container"
       }, "Today\u2019s news and views")));
     }

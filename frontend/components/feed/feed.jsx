@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NavbarContainer from '../nav_bar/navbar_container';
 import { openModal} from '../../actions/modal_actions';
 
-
+//need a container for openmodal for dispatch to props 
 
 
 class Feed extends React.Component {
@@ -89,7 +89,13 @@ class Feed extends React.Component {
                             </div>
                             <div className='write-article' onClick={e => alert("feature not available")}>Write an article on LinkedList</div>
                         </div>
-                        <div className="post-list"></div>
+                        <div className="post-list">
+                            <div className="post-container">
+
+                            </div>
+
+
+                        </div>
                     </div>
                     <div className="news-container">
                         Today’s news and views
