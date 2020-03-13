@@ -18,17 +18,20 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        closeModal: () => dispatch(closeModal()),
         createPost: post => dispatch(createPost(post))
     }
 }
 
-class createPostForm extends React.Component {
+class CreatePostForm extends React.Component {
     constructor(props) {
         super(props);
         // this.handleSubmit = this.handleSubmit.bind(this); 
+        this.state = {
+            body: ''
+        }
         this.state = this.props.post;
         this.state.photoFile = null;
+        this.handleSubmit = this.handleSubmit.bind(this)
         // this.validateSubmit = this.validateSubmit.bind(this); 
     }
 
@@ -41,9 +44,20 @@ class createPostForm extends React.Component {
     handleSubmit(e) {
 
         e.preventDefault();
-        const formData = new FormData();
-        formData.append('post[body]', this.state.body);
-        formData.append('post[photo]', this.state.photoFile);
+        let form = {
+            body: this.state.body
+        }
+        this.props.createPost(form)
+        .then(() => {
+            this.props.closeModal();
+        })
+
+
+
+
+        // const formData = new FormData();
+        // formData.append('post[body]', this.state.body);
+        // formData.append('post[photo]', this.state.photoFile);
         // $.ajax({
         //     url: 'api/posts', 
         //     method: 'POST', 
@@ -51,7 +65,7 @@ class createPostForm extends React.Component {
         //     contentType: false, 
         //     processDate: false
         // });
-        this.props.createPost(formData).then(() => this.props.closeModal());
+        // this.props.createPost(form).then(() => this.props.closeModal());
 
     }
 
@@ -122,4 +136,4 @@ class createPostForm extends React.Component {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(createPostForm);
+export default connect(mapStateToProps, mapDispatchToProps)(CreatePostForm);

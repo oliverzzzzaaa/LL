@@ -11,7 +11,7 @@ User.delete_all
 
 #User
 
-demo = User.create!(email: 'demo@demo.com' , 
+demo = User.create!(username: 'demo@demo.com' , 
                    password: '123456', 
                    first_name: 'Albert', 
                    last_name:'Chen', 

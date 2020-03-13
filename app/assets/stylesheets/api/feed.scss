@@ -65,18 +65,29 @@
     z-index: -1px;
 }
 
+#feed-img img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    border-radius: 50%;
+    
+}
 
 #feed-img{
-    // align-items: center;
-    align-content: center;
-    // display: block;
-    content: image_url('blankprofilepic.png');
+    // align-content: center;
+    // content: image_url('blankprofilepic.png');
     width: 72px;
     height: 72px;
     border-radius: 50%;
     box-sizing: border-box;
     border: 2px solid white;
     z-index: 1px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    margin: 0;
+    flex-direction: row;
 }
 
 #feed-name{
@@ -181,5 +192,43 @@ hr{
     border-width: thin;
     // box-shadow: 0 0 0 1px black;
     // border-style: solid;
+}
+
+//modal
+
+.create-post-modal-hidden {
+    display: none;
+}
+
+
+.create-post-modal-show {
+    position: absolute;
+    height: 30vh;
+    width: 40%;
+    left: 20%;
+    top: 20%;
+    z-index: 101;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+// TO EXPAND HTML AND BODY TO COVER THE WHOLE PAGE
+body, #root {
+    height: 100vh;
+}
+
+.feed-div {
+    height: 100vh;
+}
+
+.greyed-out {
+    position: fixed; 
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 

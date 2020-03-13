@@ -32,7 +32,7 @@ const Navbar = ({ currentUser, logout }) => {
             <hgroup className="welcome-header">
                     <Link to="/feed" >
                         <div className="navbar-icons">
-                            <i class="fas fa-home"></i>
+                            <i className="fas fa-home"></i>
                             <br/>
                             <div id="navbar-icon-label">Home</div>
                         </div>
@@ -46,21 +46,21 @@ const Navbar = ({ currentUser, logout }) => {
                     </Link>
                     <Link to="/jobs" >
                         <div className="navbar-icons">
-                            <i class="fas fa-suitcase"></i>
+                            <i className="fas fa-suitcase"></i>
                             <br/>
                         <div id="navbar-icon-label">Jobs</div>
                         </div>
                     </Link>
                     <Link to="/messaging" >
                         <div className="navbar-icons">
-                            <i class="fas fa-envelope"></i>
+                            <i className="fas fa-envelope"></i>
                             <br/>
                         <div id="navbar-icon-label">Messaging</div>
                         </div>
                     </Link>
                     <Link to="/notifications" >
                         <div className="navbar-icons">
-                            <i class="fas fa-bell"></i>
+                            <i className="fas fa-bell"></i>
                             <br/>
                         <div id="navbar-icon-label">Notifications</div>
                         </div>

@@ -1,4 +1,5 @@
-import * as APIUtil from "../util/session_api_util";
+// import * as APIUtil from "../util/session_api_util";
+import * as APIUtil from "../util/post_api_util";
 export const RECEIVE_ALL_POSTS = 'RECEIVE_ALL_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 
@@ -9,7 +10,7 @@ export const receiveAllPosts = (posts) => ({
 
 export const receivePost = (post) => ({
     type: RECEIVE_POST,
-    post
+    post 
 })
 
 export const fetchAllPosts = () => dispatch => (
@@ -24,5 +25,5 @@ export const fetchPost = (id) => dispatch => (
 
 export const createPost = (post) => dispatch => (
     APIUtil.createPost(post)
-      .then(post => dispatch(receivePost(post)))
+      .then(posts => dispatch(receiveAllPosts(posts)))
 )
