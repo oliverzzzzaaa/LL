@@ -19,6 +19,10 @@
     color: #2867B2;
     margin: 1em;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 .feed-profile-background{
@@ -178,3 +182,4 @@ hr{
     // box-shadow: 0 0 0 1px black;
     // border-style: solid;
 }
+

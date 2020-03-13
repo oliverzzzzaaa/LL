@@ -524,7 +524,9 @@ var Feed = /*#__PURE__*/function (_React$Component) {
         className: "ff-edit"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "icon-text"
-      }, "\xA0 Start a post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "\xA0 Start a post ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        "class": "fas fa-edit"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "icon-post"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "icon-camera",
@@ -616,22 +618,64 @@ var Navbar = function Navbar(_ref) {
       className: "list-logo"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
       className: "welcome-header"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button-home"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/feed"
-    }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button-connections"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-icons"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      "class": "fas fa-home"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "navbar-icon-label"
+    }, "Home"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/connections"
-    }, "My Network")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button-jobs"
-    }, "Jobs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button-messaging"
-    }, "Messaging"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-icons"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-user-friends"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "navbar-icon-label"
+    }, "My Network"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/jobs"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-icons"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      "class": "fas fa-suitcase"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "navbar-icon-label"
+    }, "Jobs"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/messaging"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-icons"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      "class": "fas fa-envelope"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "navbar-icon-label"
+    }, "Messaging"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/notifications"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-icons"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      "class": "fas fa-bell"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "navbar-icon-label"
+    }, "Notifications"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-profile"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar-pic"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-dropdown"
+    }, "Me \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fa fa-caret-down"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "dropdown-content"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "view-profile"
+    }, "View Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/"
+    }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "header-button-logout",
       onClick: logout
-    }, "Log Out")));
+    }, "Sign Out"), " "))))));
   };
 
   if (currentUser) {

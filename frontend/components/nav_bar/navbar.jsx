@@ -24,16 +24,64 @@ const Navbar = ({ currentUser, logout }) => {
 
     const welcomePage = () => (
         <div className="welcome-navbar">
+            
             <Link to="/feed" className="header-link">
                 <div className="list-logo"></div>
             </Link>
-            
+                
             <hgroup className="welcome-header">
-                <button className="header-button-home"><Link to="/feed" >Home</Link></button>
-                <button className="header-button-connections"><Link to="/connections" >My Network</Link></button>
-                <button className="header-button-jobs" >Jobs</button>
-                <button className="header-button-messaging">Messaging</button>
-                <button className="header-button-logout" onClick={logout}>Log Out</button>
+                    <Link to="/feed" >
+                        <div className="navbar-icons">
+                            <i class="fas fa-home"></i>
+                            <br/>
+                            <div id="navbar-icon-label">Home</div>
+                        </div>
+                    </Link>
+                    <Link to="/connections" >
+                        <div className="navbar-icons">
+                            <i className="fas fa-user-friends"></i>
+                            <br/>
+                        <div id="navbar-icon-label">My Network</div>
+                        </div>
+                    </Link>
+                    <Link to="/jobs" >
+                        <div className="navbar-icons">
+                            <i class="fas fa-suitcase"></i>
+                            <br/>
+                        <div id="navbar-icon-label">Jobs</div>
+                        </div>
+                    </Link>
+                    <Link to="/messaging" >
+                        <div className="navbar-icons">
+                            <i class="fas fa-envelope"></i>
+                            <br/>
+                        <div id="navbar-icon-label">Messaging</div>
+                        </div>
+                    </Link>
+                    <Link to="/notifications" >
+                        <div className="navbar-icons">
+                            <i class="fas fa-bell"></i>
+                            <br/>
+                        <div id="navbar-icon-label">Notifications</div>
+                        </div>
+                    </Link>
+
+                    {/* <button className="header-button-logout" onClick={logout}>Log Out</button> */}
+            
+                    <div className="navbar-profile">
+                        <div className="navbar-pic"></div>
+
+                        <div className="nav-dropdown">
+                            Me &nbsp;<i className='fa fa-caret-down'></i>
+                            <div className='dropdown-content'>
+                                {/* <Link to={`/git/${this.props.currentUser.id}`}>View Profile</Link> */}
+                                <div className="view-profile">View Profile</div>
+                                <Link to='/'>  <div className="header-button-logout" onClick={logout}>Sign Out</div> </Link>
+
+                            </div> 
+                        </div>
+                    </div>
+
             </hgroup>
         </div>
     );

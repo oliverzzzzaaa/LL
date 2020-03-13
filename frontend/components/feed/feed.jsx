@@ -81,7 +81,7 @@ class Feed extends React.Component {
                                     <div className="icon-post">
                                         <i className="ff-edit"></i>
                                     </div>
-                                    <div className="icon-text">&nbsp; Start a post</div>
+                                    <div className="icon-text">&nbsp; Start a post <i class="fas fa-edit"></i></div>
                                 </div>
                                 <div className='icon-post'><i className="icon-camera" onClick={e => alert("feature not available")} ></i></div>
                                 <div className='icon-post'><i className="icon-video" onClick={e => alert("feature not available")} ></i></div>
